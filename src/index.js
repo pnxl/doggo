@@ -24,15 +24,12 @@ const client = new Client({
     GatewayIntentBits.GuildMembers,
   ],
 });
-client.slashCmds = new Collection();
 client.legacyCmds = new Collection();
 
 // Create a new collection to store cooldowns for commands
-client.slashCooldowns = new Collection();
 client.legacyCooldowns = new Collection();
 
 // Call the command and event loader
-require("./miscellaneous/loader/slashCmd")(client);
 require("./miscellaneous/loader/legacyCmd")(client);
 require("./miscellaneous/loader/event")(client);
 
