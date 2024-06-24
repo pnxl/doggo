@@ -48,7 +48,7 @@ module.exports = {
     };
 
     const channel = await member.client.channels.cache.get(
-      "1074677495686770790"
+      config.channels.door
     );
     channel.send(
       `**${
